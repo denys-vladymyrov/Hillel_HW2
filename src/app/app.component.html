@@ -1,11 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
 <ul>
-  <li *ngFor="let item of shoppingList" (click)="productClick(item)" [ngClass]="{ 'lineThrough': item.done === true }">{{item.name}}</li>
+  <li *ngFor="let item of productList.shoppingList" (click)="productList.productClick(item)" [ngClass]="{ 'lineThrough': item.done === true }">{{item.name}}</li>
 </ul>
 
 
 <input #product type="text" placeholder="Введите продукт">
-<button (click)="addProduct(product)">Добавить</button>
+<button (click)="productList.addProduct(product)">Добавить</button>
 
 
